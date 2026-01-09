@@ -13,4 +13,5 @@ class School {
 
 void main() {
   School abcSchool = School(); // This is Default Constructor
+  print(abcSchool); // Instance of 'School'
 }
