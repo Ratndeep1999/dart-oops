@@ -26,9 +26,6 @@ class Person{
   int? age;
   bool? isMarried;
 
-  Person(this.name, this.age, this.isMarried);
-  // Now I can remove '?' from attributes
-
   void personIsEating(){
     print('Person is Eating Food');
   }
