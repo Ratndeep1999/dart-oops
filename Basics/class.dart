@@ -19,18 +19,16 @@
 //   type methodName(){}  ....method
 // }
 
-
-
-class Person{
+class Person {
   String? name;
   int? age;
   bool? isMarried;
 
-  void personIsEating(){
+  void personIsEating() {
     print('Person is Eating Food');
   }
 
-  void personIsRunning(){
+  void personIsRunning() {
     print('I am 5 years old and i am running');
   }
 }
