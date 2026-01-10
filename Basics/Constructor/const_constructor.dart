@@ -10,11 +10,31 @@
 // only class containing const constructor is initialize using const keyword.
 // object must be created using const
 
+/// Same hash code
 class Point {
   final int x;
   final int y;
 
   const Point({required this.x, required this.y});
+}
+
+/// Student class (format use in model class)
+class Student {
+  final String name;
+  final int age;
+  final int rollNumber;
+
+  const Student({
+    required this.name,
+    required this.age,
+    required this.rollNumber,
+  });
+
+  showData() {
+    print('Name: $name');
+    print('Age: $age');
+    print('Roll No.: $rollNumber');
+  }
 }
 
 void main() {
@@ -35,4 +55,19 @@ void main() {
   print('Object4 hashcode: ${object3.hashCode}'); // Object4 hashcode: 870744149
 
   print(object3 == object4); // true
+
+  /// Student object
+  const Student s1 = Student(name: 'Ratndeep', age: 26, rollNumber: 11);
+  s1.showData();
+  // Name: Ratndeep
+  // Age: 26
+  // Roll No.: 11
+
+  const Student s2 = Student(name: 'Sonali', age: 26, rollNumber: 12);
+  s2.showData();
+  // Name: Sonali
+  // Age: 26
+  // Roll No.: 12
+
+  print(s1 == s2); // false
 }
