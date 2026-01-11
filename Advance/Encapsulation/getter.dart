@@ -12,9 +12,7 @@ class Person {
   String? _firstName; // No constructor or late so it must be nullable.
   int? _age;
 
-  // setter's
-  set firstName(String firstName) => _firstName = firstName;
-  set age(int age) => _age = age;
+  Person({String? firstName, int? age}) : _firstName = firstName, _age = age;
 
   // getter's
   String? get firstName => _firstName;
@@ -22,12 +20,16 @@ class Person {
 }
 
 void main() {
-  Person person = Person();
-  person.firstName = 'Sonali';
-  person.age = 26;
+  Person person1 = Person();
 
-  print('Name: ${person.firstName} ');
-  print('Age: ${person.age} ');
+  print('Name: ${person1.firstName} ');
+  print('Age: ${person1.age} ');
+  // Name: null
+  // Age: null
+
+  Person person2 = Person(firstName: 'Sonali', age: 26);
+  print('Name: ${person2.firstName} ');
+  print('Age: ${person2.age} ');
   // Name: Sonali
   // Age: 26
 }
