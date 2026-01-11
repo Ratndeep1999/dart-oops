@@ -1,6 +1,7 @@
 /// Setter
 // Setter is use to set/update/write values of class private properties.
 // indirect write access of object private properties.
+// it is also use for data validation.
 
 /// Syntax
 // set propertyName(type parameter){
