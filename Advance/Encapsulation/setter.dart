@@ -14,9 +14,8 @@ class Person {
   int? _age;
 
   // setter's
-  set firstName(String firstName) => _firstName = firstName;
-
-  set age(int age) => _age = age;
+  set firstName(String? firstName) => _firstName = firstName;
+  set age(int? age) => _age = age; // ? means i can assign null also
 
   void showDetails() {
     print('Name: $_firstName');
@@ -30,19 +29,19 @@ class Product {
   double? _productPrice;
 
   // setters
-  set productName(String? productName) =>
-      this._productName = (productName ?? 'No Product');
+  set productName(String productName) => this._productName = productName;
 
-  set productPrice(double? productPrice) {
-    if (_productPrice! >= 0.0 || _productPrice! <= 50) {
-      throw Exception("Price is in between 0.0 & 50.0");
+  // setter with validation
+  set productPrice(double productPrice) {
+    if (productPrice < 0.0 || productPrice > 50.0) {
+      throw Exception("Price range must in between 0.0 & 50.0");
     }
     this._productPrice = productPrice;
   }
 
   showData() {
-    print('Product name: $_productName');
-    print('Product price: $_productPrice');
+    print('Product name: ${_productName ?? 'No Product'}');
+    print('Product price: ${_productPrice ?? 0.0}');
     // print('Product price: ${_productPrice ?? 0.0}');
   }
 }
@@ -55,6 +54,7 @@ void main() {
   // Age: null
 
   Person person2 = Person();
+  person2.firstName = null; // setter parameters is nullable type
   person2.firstName = 'Sonali';
   person2.age = 26;
   person2.showDetails();
@@ -64,8 +64,9 @@ void main() {
   /// Product objects
   Product product1 = Product();
   product1.showData();
-  // Product name: null
-  // Product price: null
+  // Product name: No Product
+  // Product price: 0.0
+  // product1.productPrice = null; // setter parameter is not_nullable
 
   Product product2 = Product();
   product2._productName = 'Soap';
@@ -75,9 +76,13 @@ void main() {
   // Product price: 50.0
 
   Product product3 = Product();
-  product3.productName = null;
-  product3._productPrice = null;
+  product3.productName = "Maggie";
+  try {
+    product3.productPrice = 70;
+  } catch (e) {
+    print(e); // Exception: Price range must in between 0.0 & 50.0
+  }
   product3.showData();
-  // Product name: No Product
-  // Product price: null
+  // Product name: Maggie
+  // Product price: 0.0
 }
