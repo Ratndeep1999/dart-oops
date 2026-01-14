@@ -8,7 +8,7 @@ class Rectangle {
   // Parameterized constructor
   Rectangle({required this.width, required this.height});
 
-  // Redirection constructor
+  // Redirecting constructor
   Rectangle.square(double size)
     : this(width: size, height: size); // call main constructor
 
@@ -17,7 +17,7 @@ class Rectangle {
     print('Height: $height');
   }
 
-  findAres() => width * height;
+  findArea() => width * height;
 }
 
 void main() {
@@ -25,6 +25,6 @@ void main() {
   square.showData();
   // Width: 5.0
   // Height: 5.0
-  print('Area of Square: ${square.findAres()}');
+  print('Area of Square: ${square.findArea()}');
   // Area of Square: 25.0
 }
