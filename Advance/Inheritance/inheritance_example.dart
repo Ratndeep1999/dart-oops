@@ -1,7 +1,7 @@
 class Human {
   String? name;
   int numOfHands = 2;
-  int numOfLegs = 2;
+  int numOfLegs = 2;  // if static and const then super not work with this.
 
   void eat() => print('Humans eat Vegetables and Fruits');
 }
