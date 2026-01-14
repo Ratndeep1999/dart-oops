@@ -2,50 +2,49 @@
 // A class is inherit fromm another class & that class also inherit from another class.
 // A class is extend from another class, and that class also extended from another class.
 
-class SolarSystem {
-  String galaxyName = 'Andro-meda';
-  int noOfPlanets = 8;
+class Person {
+  String? name;
+  int? age;
 
-  showDetails(){
-    print('Galaxy: $galaxyName');
-    print('Total Planets: $noOfPlanets');
+  void displayInfo() {
+    print('Name: $name');
+    print('Age: $age');
   }
 }
 
-class Star extends SolarSystem {
-  String starName = 'Sun';
+class Teacher extends Person {
+  String? degree;
+  String? schoolName;
 
-  showDetails(){
-    super.showDetails();
-    print('Star: $starName');
+  @override
+  void displayInfo() {
+    super.displayInfo();
+    print('Degree: $degree');
+    print('School name: $schoolName');
   }
 }
 
-class Planet extends Star {
-  String planetName = 'Earth';
-  int noOfMoons = 1;
+class Specialist extends Teacher {
+  String? teachingSubject;
 
-  showDetails(){
-    super.showDetails();
-    print('Planet name: $planetName');
-    print('No. of Moons: $noOfMoons');
+  @override
+  void displayInfo() {
+    super.displayInfo();
+    print('teaching subject: $teachingSubject');
   }
 }
 
 void main(){
-  Planet earth = Planet();
-  earth.showDetails();
-  // Galaxy: Andro-meda
-  // Total Planets: 8
-  // Star: Sun
-  // Planet name: Earth
-  // No. of Moons: 1
-
-  earth.galaxyName = 'Milke-way';
-  earth.showDetails();
-  // Galaxy: Milke-way
-  // Total Planets: 8
-  // Star: Sun
-  // Planet name: Earth
-  // No. of Moons: 1
+  Specialist p1 = Specialist();
+  p1.name = 'Sonali';
+  p1.age = 28;
+  p1.degree = 'B.Sc';
+  p1.schoolName = 'ABC School';
+  p1.teachingSubject = 'General Science';
+  p1.displayInfo();
+  // Name: Sonali
+  // Age: 28
+  // Degree: B.Sc
+  // School name: ABC School
+  // teaching subject: General Science
 }
