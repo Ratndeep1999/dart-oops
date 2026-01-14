@@ -34,7 +34,7 @@ void main() {
   print('Height ${rectangle.height}'); // Height 2.5
   print('Width ${rectangle.width}'); // Width 2.0
 
-  try{
+  try {
     rectangle.height = -1;
   } catch (e) {
     print(e); // Exception: Height must be positive
