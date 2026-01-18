@@ -57,3 +57,11 @@ void main() {
 
 /// Polymorphism: Rectangle, Triangle, Square and Circle these can be treated as
 /// Shape types, allowing to write code that works with these shapes generically.
+
+
+/// Case : abstract class + extends (Constructor WORKS)
+/// Key Points
+// Constructor is inherited
+// super() is allowed
+// Fields are initialized in abstract class
+// Abstract class still cannot be instantiated
