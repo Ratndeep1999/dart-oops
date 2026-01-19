@@ -11,9 +11,9 @@ abstract class Person {
 
 class Student implements Person {
   @override
-  String name;
+  final String name;
   @override
-  int age;
+  final int age;
 
   Student({required this.name, required this.age});
 
