@@ -1,5 +1,5 @@
 abstract class Person {
-  late String name;
+  late String name; // for better use getters
   late int age;
 
   void intro();
@@ -34,16 +34,17 @@ class Student implements Person {
 }
 
 void main() {
-  // Student student = Student();
-  // To achieve this make variables 'late' with final if 'get' use in interface
-  // student.name = 'Ratndeep';
-  // student.age = 26;
-
   Person student = Student(name: 'Ratndeep', age: 26);
 
   student.intro(); // My name is Ratndeep and my age is 26
   student.canWalk(); // Student Ratndeep can walk!..
   student.canRun(); // Student Ratndeep can run!..
+
+  student.name = 'Sonali';
+  student.age = 25;
+  student.intro(); // My name is Sonali and my age is 25
+  student.canWalk(); // Student Sonali can walk!..
+  student.canRun(); // Student Sonali can run!..
 }
 
 /// Case : abstract class + implements (Constructor NOT USED)
@@ -51,14 +52,15 @@ void main() {
 // Because implements treats Person as a pure interface.
 // Student() : super(); // ERROR  ..So this is NOT allowed:
 // Student({required this.name, required this.age});
-// means constructor in Person exists, but Student cannot access it.
+// means constructor in Person exists because of abstract class,
+// but Student cannot access it because after 'implement' Student get Person as pure interface.
 
 /// Important Rule: constructor + interface behavior not work together
-// Reuse constructor + fields --> extends
-// Pure contract / interface  --> implements
+// Reuse constructor + fields --> use with 'extends'
+// Pure contract / interface  --> use with 'implements'
 
 /// Note:
-// 1. When using an abstract class as an interface,
+// When using an abstract class as an interface,
 // never declare fields directly — use getters instead. eg. String get name;
 // This is how repositories, entities, and domain layers are written in Flutter.
 
