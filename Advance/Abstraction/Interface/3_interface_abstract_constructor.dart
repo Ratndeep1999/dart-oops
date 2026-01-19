@@ -1,6 +1,6 @@
 abstract class Person {
-  late String name; // for better use getters
-  late int age;
+  String get name; // for better use getters
+  int get age;
 
   void intro();
 
@@ -40,8 +40,8 @@ void main() {
   student.canWalk(); // Student Ratndeep can walk!..
   student.canRun(); // Student Ratndeep can run!..
 
-  student.name = 'Sonali';
-  student.age = 25;
+  // student.name = 'Sonali';  // can not set - There isn't a setter named 'name' in class 'Person'.
+  // student.age = 25;
   student.intro(); // My name is Sonali and my age is 25
   student.canWalk(); // Student Sonali can walk!..
   student.canRun(); // Student Sonali can run!..
