@@ -28,3 +28,13 @@
 
 /// With
 // In case we use concreate class with mixins, at that time use 'with' keyword.
+
+/// What is allowed for mixin
+// Properties and static variables.
+// Regular, abstract and static methods.
+// use one or more mixins in class
+
+/// What is not allowed for mixins
+// define a constructor.
+// extend a mixin.
+// object of mixin.
