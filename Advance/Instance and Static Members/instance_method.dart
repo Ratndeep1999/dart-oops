@@ -1,11 +1,11 @@
 /// Instance Method
-// Non-static, defines inside class and operate on an instance of class.
-// Can access instance variable and other instance methods of same object.
+// A non-static method defined inside a class, and operates on an instance of class.
+// It can access instance variables and other instance methods of same object.
 
 /// Key-Points
-// Invoke by object of class.
-// Use to define behavior or functionality specific to an object.
-// Use this keyword to refer to current instance.
+// Called using an object of the class.
+// Defines behavior specific to an object.
+// Can use the `this` keyword to refer to the current instance.
 
 class Person {
   String name;
