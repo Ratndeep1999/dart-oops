@@ -1,13 +1,15 @@
 /// Null Uses in Dart
 
 void main(){
-  List<int?> items = [0, 2, null]; // null safe list
 
-  // i can pass both null or string
+  // Nullable list that can store null values (null safe)
+  List<int?> items = [0, 2, null];
+
+  // Nullable function parameters that accepts both String & null
   printName('Sonali');
   printName(null);
 
-  // I can pass null values from constructor.
+  // Nullable class property → constructor can accept null
   Person(null);
   Person('Sonali');
 }
@@ -17,8 +19,9 @@ void printName(String? name){
   print(name);
 }
 
-// null safe class properties
+// null-safe class properties
 class Person {
   String? name;
+
   Person(this.name);
 }
