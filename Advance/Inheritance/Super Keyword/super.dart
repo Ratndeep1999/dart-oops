@@ -1,5 +1,6 @@
 /// Super
-// 'super' keyword refers parent class members, use to call parent class properties and methods.
+// 'super' refers to the immediate parent class members.
+// It is used to access parent class properties, methods, and constructors.
 
 class Vehicle {
   int numOfWheels = 4;
@@ -37,6 +38,7 @@ class BMW extends Car {
 
 void main() {
   BMW bmw = BMW();
+
   bmw.lights();
   // BMW headlights on..
   // Car Sun-Ruff opens..
