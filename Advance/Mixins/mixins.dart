@@ -1,14 +1,18 @@
 /// Mixins
-// Mixins are use to inherit code in multiple classes.
-// We can use multiple mixins in a single class.
-// Mixins are declared using keyword mixin follow by mixin name.
-// Three keywords are use with mixins: mixin, with, and on.
+// Mixins are used to share common code across multiple classes.
+// They allow code reuse without using inheritance. A class can use multiple mixins.
+
+/// Keywords used with mixins
+// mixin --> to declare a mixin
+// with --> to apply mixins to a class
+// on --> to restrict which classes can use the mixin
 
 /// Key-points
 // Mixin has no constructor, Can't be instantiated means No object.
-// Use to share code between multiple classes.
-// We can override the mixin class methods.
-// Cannot extend only work with 'on' and 'with'.
+// Use to share behavior across unrelated classes.
+// A class can use multiple mixins.
+// Mixin methods can be overridden by the class.
+// Mixins cannot extend other classes (but can use 'on').
 
 /// syntax
 // mixin Mixin1 {
@@ -23,18 +27,27 @@
 //   code
 // }
 
-/// On
-// In case we use mixins with the specific class, at that time use 'on' keyword.
+/// 'on' keyword
+// Used to restrict a mixin to be applied only to specific classes.
+// mixin CanFly on Bird {
+//   void fly() => print('Flying');
+// }
 
 /// With
-// In case we use concreate class with mixins, at that time use 'with' keyword.
+// Used to apply one or more mixins to a class.
+// class Duck extends Bird with CanFly {}
 
-/// What is allowed for mixin
-// Properties and static variables.
-// Regular, abstract and static methods.
-// use one or more mixins in class
+/// What is allowed in mixins
+// Instance and Static variables.
+// Concrete, abstract and static methods.
+// Multiple mixins ina single class
 
 /// What is not allowed for mixins
-// define a constructor.
-// extend a mixin.
-// object of mixin.
+// Constructors
+// Creating objects of mixins
+// Extending other classes
+
+/// Summary
+// Mixins --> reusable behavior
+// Inheritance --> IS-A relationship
+// Mixins --> Has-A / Can-Do behavior
