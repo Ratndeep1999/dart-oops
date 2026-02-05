@@ -1,9 +1,7 @@
 /// Multiple Inheritance
-// Dart doesn't support multiple inheritance.
-// It all to inherit from more than one parent class.
-// Helps to avoid complexity.
-
-/// I can achieve similar behaviour using 'mixins'
+// Dart doesn't support multiple inheritance using classes.
+// Helps to avoid complexity (Diamond problem). Similar behavior
+// can be achieved using mixins.
 
 mixin CanSwim {
   swim() => print('Swimming');
