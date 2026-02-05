@@ -1,5 +1,5 @@
 ///enum:
-// Enum is a special type that represents fix number of constant values.
+// Enum is a special data type that represents fix set of constant values.
 // Declare using keyword 'enum' & outside the class
 // Must contain at least one constant value.
 // Immutable and can not be instantiated beyond their defined values.
@@ -15,5 +15,6 @@
 // }
 
 /// Key-Points:
-// Can-not inherit.
+// Can-not inherited or extended.
 // Values are fixed at compile time.
+// Provides ".value" to get all enum values.
