@@ -1,7 +1,7 @@
 /// Compile time Polymorphism (Static Polymorphism)
 // Dart does not support true compile-time polymorphism because
 // it does not allow method overloading.
-// (having two functions with the exact same name but different signatures).
+// ( same method name with different parameter lists )
 
 // Dart provides similar behavior using:
 // Optional parameters
@@ -11,7 +11,8 @@
 // eg. (Alternate to overloading in dart)
 // void log(String message, {int? level}) {}
 
-/// Compile-time polymorphism
-// Achieved using inheritance + overridden methods.
-// Polymorphism in dart is primarily runtime-based using
-// method overriding and interface / abstract classes.
+// Note
+// Method overriding is not compile-time polymorphism.
+
+/// Dart supports Runtime Polymorphism only.
+// Achieved using inheritance + method overriding + interface / abstract classes.
