@@ -1,4 +1,4 @@
-/// Generics variable type
+/// Generics Type Naming Conventions
 // T --> Type (represents a single data type)
 // E --> Element (commonly used for collections [list, set])
 // K --> Key (use for map keys)
