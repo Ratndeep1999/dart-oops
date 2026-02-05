@@ -1,10 +1,10 @@
 /// Generics
 // Generics allow us to create classes, methods, or functions
-// that can work with different data types.
+// that can work with different data types while maintaining type safety.
 
 /// In simple words
 // Write code once and reuse it with multiple data types
-// while maintaining type safety.
+// without losing compile-time type checking.
 
 /// Syntax
 class ClassName<T> {
@@ -15,12 +15,11 @@ class ClassName<T> {
 
 /// Benefits
 // Type Safety
-// --> Provides compile-time type checking.
+// --> Ensure compile-time type checking.
 // --> Prevents runtime type errors.
 
 // Code Reusability
-// --> Same class or function can work with
-// int, string, double, custom objects, etc.
+// --> Same class or function work with int, string, double, custom objects.
 
 // Clean & Maintainable Code
 // --> Removes unnecessary type casting.
