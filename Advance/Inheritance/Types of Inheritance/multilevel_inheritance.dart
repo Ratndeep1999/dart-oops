@@ -1,6 +1,6 @@
 /// Multilevel Inheritance
-// A class is inherit fromm another class & that class also inherit from another class.
-// A class is extend from another class, and that class also extended from another class.
+// A class is inherit from another class & that class
+// also inherit from another class.
 
 class Person {
   String? name;
