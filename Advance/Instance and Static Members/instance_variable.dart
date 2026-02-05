@@ -1,12 +1,12 @@
 /// Instance Variable
-// Not-static variable declared within a class.
+// A variable declared inside a class without the `static` keyword.
 // Belongs to an instance (object) of the class
-// means each object has its own copy of variable.
+// meaning each object has its own separate copy.
 
 /// Key-Points
-// Stores data/state to an object.
-// Have access modifiers (eg. public or private).
-// Initialize when object is created, often with default or constructor-provided values.
+// Stores data/state of an object.
+// Can have access modifiers (eg. public or private).
+// Initialize when object is created, either with default or constructor-provided values.
 
 class Person {
   // Instance variable
