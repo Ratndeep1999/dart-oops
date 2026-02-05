@@ -33,5 +33,3 @@ void main(){
   // Name: Unknown
   // Profession: Not Given
 }
-
-/// Note: most of the common error caused due to null.
