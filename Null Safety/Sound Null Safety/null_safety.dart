@@ -1,44 +1,50 @@
 /// Null Safety (Sound null safety)
-// This allow developer to catch error at compile and run time
+// Null safety helps developers catch null-related errors at compile time and runtime.
 
 /// Advantages
-// Reduce the chance of application crashes.
-// Easy to find anf ix bug.
-// Null safety avoids null errors, runtime bugs, vulnerabilities, and system crashes.
+// Reduces application crashes caused by null errors.
+// Makes bugs easier to find and fix.
+// Prevents runtime null exceptions and improves app stability.
 
 /// Key-points
 // In dart, variable is non-nullable by default.
-// if statement, !(not) and, ?? operator use to handle null errors.
-// dart 2.12 introduce sound null safety to solve null null problems.
+// Dart 2.12 introduced Sound Null Safety.
 // NNBD stands for Non-Nullable By Default.
-// Non-Nullable type is conformed never to be null.
+// Use if-checks, ! (null assertion), and ?? (null-coalescing) operators to handle nullable values.
 
 void main() {
   /// Difference between Null, Empty and Blank
-  // Null:
+
+  // Null --> No value at all
   Null data = null;
   print(data.runtimeType); // Null
-  // Empty:
+
+  // Empty --> Value exists but contains nothing
   var empty = "";
   print(empty.runtimeType); // String
-  // Blank:
+
+  // Blank --> Contains whitespace
   var blank = " ";
   print(blank.runtimeType); // String
 
-  String? name; // null-safe variable
-  name = 'Sonali'; // variable accept String
-  name = null; // variable accept null
+  // Nullable vs Non-nullable
+  String? name; // Nullable variable
+  name = 'Sonali'; // Accept String
+  name = null; // Accept null
 
-  // check is name is null
+  // Null check
   if (name == null) {
     print('Name is null');
   }
 
-  // assign default value if variable is null
+  // Null-coalescing operator (??)
+  // Provides a default value if name is null
   String name1 = name ?? "Ratndeep";
   print('name1 = $name1');
 
-  // tell that variable is not null
+  // Null assertion operator (!)
+  // Tells the compiler: "I am sure this is not null"
+  // Throws runtime error if value is actually null
   String name2 = name!;
-  // print('name2 = $name2');
+  print(name2); // Unhandled exception: Null check operator used on a null value
 }
