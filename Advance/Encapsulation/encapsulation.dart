@@ -25,12 +25,12 @@ class Person {
 
 /// Note:
 /// Problem 1
-// If properties is final then we can not change after run
-// If modify values after run then it return exception.
+// If properties is final then we can not change it after run
+// If values modify after run then it return exception.
 
 /// Problem 2
 // If properties is not final means null or constructor is used
-// If constructor is use means values never null
+// If constructor is use means variables initialize at the time of object creation.
 // If null use means getters can be nullable
 
 /// Problem 3
