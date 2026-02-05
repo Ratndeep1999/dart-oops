@@ -1,9 +1,9 @@
 /// Static Variable
 // Class level variable declare with static keyword.
-// Static variable shared across all instance of class, means there is only one copy of static variable.
-// Stores data common to class, not to instance
-// Initialize only once when the class is load. not the object
-// Access using class name.
+// Only one copy exists, shared across all instances of the class.
+// It stores data common to the class, not individual objects.
+// Initialized once when the class is loaded into memory.
+// Accessed using the class name, not object reference.
 
 class Vehicle {
   String color;
