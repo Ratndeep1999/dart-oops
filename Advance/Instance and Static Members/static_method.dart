@@ -1,10 +1,10 @@
 /// Static Method
-// Class level method declare with 'static' method.
+// Class level method declare with 'static' keyword.
+// Belongs to the class, not to instances.
 // Used for utility/Helper-logic functions or operations related to class as a whole.
 // Called using class name.
-
-/// Note: Hashcode of static method returning object is not
-/// same but if result is same then hashcode is same.
+// Cannot access instance variables or instance methods.
+// Cannot use `this` or `super`.
 
 /// Person
 class Person {
