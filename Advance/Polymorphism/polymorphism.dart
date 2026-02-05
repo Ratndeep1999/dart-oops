@@ -15,8 +15,8 @@
 // object type, not the reference type.
 
 /// Note:
-// Polymorphism is updating or modifying the feature, function, or
-// implementation that already exists in the parent class
+// Polymorphism allows a parent class reference to call different
+// implementations of the same method. based on the child object at runtime.
 
 /// Syntax
 // class ParentClass {
@@ -29,6 +29,7 @@
 // }
 
 /// Key Concepts of Polymorphism
+
 /// 1. Method Overriding:
 // A child class provides its own implementation of a method
 // that already exists in the parent class.
@@ -39,13 +40,12 @@
 /// 2. Method Overloading:
 // Dart does not support traditional method overloading
 // (same method name with different parameters).
-// Alternative: Optional, Named parameters and different method names.
+// Alternative: Optional, Named parameters or different method names.
 // Dart achieves similar behavior using flexible parameters, not true method overloading.
 
 /// 3. Dynamic Typing:
-// A parent class or interface reference can point to different child class object.
-// The method is resolved at runtime.
-// This enables runtime polymorphism.
+// A parent class reference can point to different child class objects.
+// The method is resolved at runtime. This enables runtime polymorphism.
 // eg. Animal animal = Dog();
 //     animal.sound();   ...Dog's sound is called
 
@@ -53,7 +53,8 @@
 /// Type of Polymorphism:
 // 1. Compile-time Polymorphism (Method Overriding)
 // 2. Runtime Polymorphism (Most important)
+// Dart supports Runtime Polymorphism only. It is achieved using method overriding.
 
 /// What does !
-// It allows for code that works on the 'parent class type' to
-// operate on any 'derived class type'.
+// It allows code written for a parent class to work with
+// any derived class object dynamically.
