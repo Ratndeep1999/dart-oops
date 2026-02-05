@@ -1,16 +1,17 @@
 /// Inheritance of Constructor
-// Process of inheriting the constructor of the parent class to child class.
-// Always parent class constructor invoke first.
-// Child class constructor invoke parent class constructor.
+// Constructors are NOT inherited in Dart. When a child class object
+// is created the parent class constructor is invoked automatically
+// first this process is called constructor chaining.
 
 class A {
-  A() {
+  A(String name) {
     print('Class A constructor called');
+    print('Name: $name');
   }
 }
 
 class B extends A {
-  B() {
+  B() : super('Ratndeep') {
     print('Class B constructor called');
   }
 }
