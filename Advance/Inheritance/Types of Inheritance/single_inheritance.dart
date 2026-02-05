@@ -1,14 +1,15 @@
 /// Single Inheritance
-// A class can inherit from only one class.
-// Form of general inheritance.
+// A class can inherit from only one class. It is the simplest
+// form of inheritance.
 
 class Vehicle {
   int wheels = 4;
+
   void vehicleRun() => print('Vehicle run on $wheels wheels.');
 }
 
 class Car extends Vehicle {
-  @override // implement/override parent class method
+  @override  // override parent class method
   void vehicleRun() {
     super.vehicleRun();
     print('Car run on $wheels wheels.');
