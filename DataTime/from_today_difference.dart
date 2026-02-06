@@ -1,13 +1,14 @@
-/// Get total difference in between two dates
+/// Get total difference between two DateTime objects
 
 void main() {
-  // get current data and time
+
+  // Current data and time
   DateTime toady = DateTime.now();
 
-  // convert birthday data to DateTime type
+  // Birthday converted from String to DateTime
   DateTime myBirthday = DateTime.parse('1999-02-06');
 
-  // get duration difference of two dates
+  // Difference between two dates
   Duration duration = toady.difference(myBirthday);
 
   print('Completed Days till now: ${duration.inDays}');
