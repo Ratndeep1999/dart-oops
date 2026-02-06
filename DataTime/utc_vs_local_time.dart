@@ -1,19 +1,19 @@
 /// UTC vs Time
 // Sometime, backend APIs usually send UTC time,
-// but mobile apps show local time.
+//  while mobile apps display time in local timezone.
 
 /// UTC: Coordinated Universal Time (World Clock)
 // Global standard time, same for everyone in the world.
 
 /// Local Time:
 // Time based on your country/region
-// eg. India (IST) = UTC + 5:30
+// eg. India (IST) = UTC + 05:30
 
 void main() {
-  // get local time IST (base on country)
+  // 1. Get local time IST (base on device timezone)
   DateTime localTime = DateTime.now();
 
-  // get global time (world clock)
+  // 2. Get UTC time (world clock)
   DateTime utcTime = DateTime.now().toUtc();
 
   print('Local Time: $localTime'); // Local Time: 2026-01-21 20:52:46.121306
